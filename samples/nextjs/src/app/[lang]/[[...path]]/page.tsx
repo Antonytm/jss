@@ -9,9 +9,10 @@ import Layout from './jss-layout';
 // import { i18n } from '../../../../i18n-config';
 // import { StaticPath } from '@sitecore-jss/sitecore-jss-nextjs';
 
-type PageProps = { params: { path?: string[]; lang: string } };
+//type PageProps = { params: { path?: string[]; lang: string } } ;
 
-export default async function Page({ params }: PageProps) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default async function Page({ params }: any) {
   const context = {
     preview: false,
     params,
@@ -37,7 +38,8 @@ export default async function Page({ params }: PageProps) {
 }
 
 // <Head /> tag implementation
-export async function generateMetadata({ params }: PageProps) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export async function generateMetadata({ params }: any) {
   return {
     title: params.path ? params.path[0] : 'Home',
   };

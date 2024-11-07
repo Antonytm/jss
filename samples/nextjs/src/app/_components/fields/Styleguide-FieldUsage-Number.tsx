@@ -21,6 +21,8 @@ const StyleguideFieldUsageText = (props: StyleguideFieldUsageTextProps): JSX.Ele
   return (
     <StyleguideSpecimen {...props} e2eId="styleguide-fieldusage-number">
       {/* Basic emission of a number field for editing can be done with the <Text> component. */}
+      {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+      {/*@ts-ignore*/}
       <Text field={props.fields.sample} />
 
       {/* Direct access to the value, which is a JS number, is also supported. */}

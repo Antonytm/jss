@@ -16,6 +16,8 @@ type StyleguideSectionProps = ComponentProps & {
  */
 const StyleguideSection = (props: StyleguideSectionProps): JSX.Element => (
   <div className="pt-3" id={`i${props.rendering.uid && props.rendering.uid.replace(/[{}]/g, '')}`}>
+    {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+    {/*@ts-ignore*/}
     <Text className="border-bottom" field={props.fields.heading} tag="h3" />
     <Placeholder name="NextjsApp-jss-styleguide-section" rendering={props.rendering} />
   </div>

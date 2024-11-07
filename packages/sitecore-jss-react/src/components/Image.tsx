@@ -1,3 +1,4 @@
+'use client'
 import { mediaApi } from '@sitecore-jss/sitecore-jss/media';
 import PropTypes from 'prop-types';
 import React from 'react';

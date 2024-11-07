@@ -22,6 +22,8 @@ type StyleguideFieldUsageImageProps = ComponentProps &
 const StyleguideFieldUsageImage = (props: StyleguideFieldUsageImageProps): JSX.Element => (
   <StyleguideSpecimen {...props} e2eId="styleguide-fieldusage-image">
     <p>Plain image</p>
+    {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+    {/*@ts-ignore*/}
     <NextImage field={props.fields.sample1} height="51" width="204" />
 
     {/*
@@ -34,6 +36,8 @@ const StyleguideFieldUsageImage = (props: StyleguideFieldUsageImageProps): JSX.E
       any other attributes: pass through to img tag
     */}
     <p>Advanced image (not editable)</p>
+    {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+    {/*@ts-ignore*/}
     <NextImage
       field={props.fields.sample2}
       editable={false}
@@ -60,6 +64,8 @@ const StyleguideFieldUsageImage = (props: StyleguideFieldUsageImageProps): JSX.E
         width: 300,
       }}
     >
+      {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+      {/*@ts-ignore*/}
       <NextImage
         field={props.fields.sample2}
         sizes="(min-width: 960px) 300px, 100px"

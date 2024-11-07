@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { handleEditorFastRefresh, SitecoreContext } from '@sitecore-jss/sitecore-jss-nextjs';
 import { SitecorePageProps } from 'lib/page-props';
-import { NextIntlProvider } from 'next-intl';
+import { IntlProvider } from 'next-intl';
 import { componentFactory, editingComponentFactory } from 'temp/componentFactory';
 
 export const Providers = (props: SitecorePageProps) => {
@@ -31,14 +31,16 @@ export const Providers = (props: SitecorePageProps) => {
           Throw error
         </button>
       </>
-      <NextIntlProvider locale={props.locale} messages={props.dictionary}>
+      <IntlProvider locale={props.locale} messages={props.dictionary}>
+        {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+        {/* @ts-ignore */}
         <SitecoreContext
           componentFactory={isEditing ? editingComponentFactory : componentFactory}
           layoutData={props.layoutData}
         >
           {props.children}
         </SitecoreContext>
-      </NextIntlProvider>
+      </IntlProvider>
     </div>
   );
 };

@@ -25,6 +25,8 @@ const StyleguideSpecimen = ({
     id={`i${rendering.uid && rendering.uid.replace(/[{}]/g, '')}`}
     data-e2e-id={e2eId}
   >
+    {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+    {/*@ts-ignore*/}
     <Text tag="h4" field={heading} />
     <RichText field={description} />
 

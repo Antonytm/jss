@@ -30,6 +30,8 @@ const StyleguideFieldUsageItemLink = (props: StyleguideFieldUsageItemLinkProps):
         <div>
           {/* The referenced item's fields can be rendered and edited using normal helper components: */}
           <p>
+            {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+            {/*@ts-ignore*/}
             Field: <Text field={sharedItemLink.fields.textField as Field<string>} />
           </p>
         </div>
@@ -39,6 +41,8 @@ const StyleguideFieldUsageItemLink = (props: StyleguideFieldUsageItemLinkProps):
       {localItemLink && (
         <div>
           <p>
+            {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+            {/*@ts-ignore*/}
             Field: <Text field={localItemLink.fields.textField as Field<string>} />
           </p>
         </div>

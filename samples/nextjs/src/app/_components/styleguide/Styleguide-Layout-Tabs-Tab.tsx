@@ -31,6 +31,8 @@ const StyleguideLayoutTabsTab = (props: StyleguideLayoutTabsTabProps): JSX.Eleme
           which means there's no regular tab titles rendered.
           So we conditionally render the tab title here, when editing. */}
       {sitecoreContext && sitecoreContext.pageEditing && (
+        /* eslint-disable-next-line @typescript-eslint/ban-ts-comment */
+        /*@ts-ignore*/
         <Text tag="h5" field={props.fields.title} />
       )}
 

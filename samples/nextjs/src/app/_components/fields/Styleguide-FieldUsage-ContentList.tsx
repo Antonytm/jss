@@ -36,6 +36,8 @@ const StyleguideFieldUsageContentList = (
           <div key={`sharedListItem-${index}`}>
             {/* The referenced item's fields can be rendered and edited using normal helper components: */}
             <p>
+              {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+              {/*@ts-ignore*/}
               Field: <Text field={listItem.fields.textField as Field<string>} />
             </p>
           </div>
@@ -47,6 +49,8 @@ const StyleguideFieldUsageContentList = (
           <div key={`localListItem-${index}`}>
             {/* The referenced item's fields can be rendered and edited using normal helper components: */}
             <p>
+              {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+              {/*@ts-ignore*/}
               Field: <Text field={listItem.fields.textField as Field<string>} />
             </p>
           </div>

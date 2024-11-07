@@ -25,6 +25,8 @@ const StyleguideEditFrame = (props: StyleguideEditFrameProps): JSX.Element => {
   const applyRed = props.fields.applyRedToText.value;
   return (
     <StyleguideSpecimen {...props} e2eId="styleguide-edit-frame">
+      {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+      {/*@ts-ignore*/}
       <EditFrame {...getEditFrameProps(props.rendering.dataSource)}>
         This is the content that will be wrapped by edit frame in Experience Editor.
         <br />
@@ -43,6 +45,8 @@ const StyleguideEditFrame = (props: StyleguideEditFrameProps): JSX.Element => {
             <li key={idx}>{(item.fields.title as Field<string>)?.value}</li>
           ))}
         </ul>
+        {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+        {/*@ts-ignore*/}
         {props.children}
       </EditFrame>
     </StyleguideSpecimen>

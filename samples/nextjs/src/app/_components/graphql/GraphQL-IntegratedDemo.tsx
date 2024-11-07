@@ -89,6 +89,8 @@ const GraphQLIntegratedDemo = (props: GraphQlIntegratedDemoProps): JSX.Element =
           <br />
           sample1: {datasource.sample1.value}
           <br />
+          {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+          {/*@ts-ignore*/}
           sample1 (editable): <Text field={datasource.sample1.jsonValue} />
           <br />
           sample2:
@@ -98,6 +100,8 @@ const GraphQLIntegratedDemo = (props: GraphQlIntegratedDemoProps): JSX.Element =
             <li>url: {datasource.sample2.url}</li>
             <li>target: {datasource.sample2.target}</li>
             <li>
+              {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+              {/*@ts-ignore*/}
               editable: <Link field={datasource.sample2.jsonValue} />
             </li>
             <li>field type: {datasource.sample2.definition.type}</li>
@@ -117,6 +121,8 @@ const GraphQLIntegratedDemo = (props: GraphQlIntegratedDemoProps): JSX.Element =
             {contextItem.children.results.map((child: Item) => (
               <li key={child.id}>
                 <NextLink href={child.url.path}>{child.pageTitle.value}</NextLink>
+                {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+                {/*@ts-ignore*/}
                 &nbsp; (editable title too! <Text field={child.pageTitle.jsonValue} />)
               </li>
             ))}

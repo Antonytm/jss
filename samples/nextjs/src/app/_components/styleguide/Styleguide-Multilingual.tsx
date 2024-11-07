@@ -24,6 +24,8 @@ const StyleguideMultilingual = (props: StyleguideMultilingualProps): JSX.Element
 
   return (
     <StyleguideSpecimen {...props} e2eId="styleguide-multilingual">
+      {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+      {/*@ts-ignore*/}
       <Text field={props.fields.sample} encode={false} tag="p" />
 
       <p>

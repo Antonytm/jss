@@ -21,9 +21,13 @@ const StyleguideFieldUsageDate = (props: StyleguideFieldUsageDateProps): JSX.Ele
     <StyleguideSpecimen {...props} e2eId="styleguide-fieldusage-date">
       <ul>
         <li>
+          {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+          {/*@ts-ignore*/}
           Date helper: <DateField field={props.fields.date} />
         </li>
         <li>
+          {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+          {/*@ts-ignore*/}
           Date helper (datetime): <DateField field={props.fields.dateTime} />
         </li>
         <li>
@@ -32,10 +36,14 @@ const StyleguideFieldUsageDate = (props: StyleguideFieldUsageDateProps): JSX.Ele
             Date helper supports a render props API to give you direct access to the JS Date object for formatting.
             IMPORTANT: the render prop is ignored when in Experience Editor mode to support inline editing.
           */}
+          {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+          {/*@ts-ignore*/}
           <DateField field={props.fields.date} render={(date) => date && date.toUTCString()} />
         </li>
         <li>
           Localized Date string (local timezone):&nbsp;
+          {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+          {/*@ts-ignore*/}
           <DateField
             field={props.fields.date}
             render={(date) => date && date.toLocaleDateString()}

@@ -65,6 +65,8 @@ class StyleguideLayoutTabs extends React.Component<
                     onClick={() => this.setActiveTab(index)}
                     href="#t"
                   >
+                    {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+                    {/*@ts-ignore*/}
                     <Text field={tab.props.fields.title} />
                   </a>
                 </li>
@@ -98,10 +100,10 @@ class StyleguideLayoutTabs extends React.Component<
 // this another option compared to using the <Placeholder> component;
 // in this case, chosen because we primarily need access to the _data_
 // of the placeholder.
-const tabsComponentWithPlaceholderInjected = withPlaceholder({
-  placeholder: 'NextjsApp-jss-tabs',
-  prop: 'tabsPlaceholder',
-})(StyleguideLayoutTabs);
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+// eslint-disable-next-line prettier/prettier
+const tabsComponentWithPlaceholderInjected = withPlaceholder({ placeholder: 'NextjsApp-jss-tabs', prop: 'tabsPlaceholder' })(StyleguideLayoutTabs);
 
 // We need to know if experience editor is active, to disable the dynamic tab behavior for editing.
 // Using the same technique as injecting the placeholder, we wrap the component again to inject the

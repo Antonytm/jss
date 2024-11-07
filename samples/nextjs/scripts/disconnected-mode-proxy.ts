@@ -20,6 +20,8 @@ const serverOptions = {
   appRoot: path.join(__dirname, '..'),
   appName: config.jssAppName,
   // Prevent require of ./sitecore/definitions/config.js, because ts-node is running
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
   requireArg: null,
   watchPaths: ['./data'],
   language: config.defaultLanguage,

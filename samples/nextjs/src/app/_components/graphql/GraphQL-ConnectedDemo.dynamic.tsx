@@ -80,6 +80,8 @@ const GraphQLConnectedDemo = (props: GraphQLConnectedDemoProps) => {
           <br />
           sample1: {graphQLResult.datasource.sample1?.value}
           <br />
+          {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+          {/*@ts-ignore*/}
           sample1 (editable): <Text field={graphQLResult.datasource.sample1?.jsonValue} />
           <br />
           sample2:
@@ -89,6 +91,8 @@ const GraphQLConnectedDemo = (props: GraphQLConnectedDemoProps) => {
             <li>url: {graphQLResult.datasource.sample2?.url}</li>
             <li>target: {graphQLResult.datasource.sample2?.target}</li>
             <li>
+              {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+              {/*@ts-ignore*/}
               editable: <Link field={graphQLResult.datasource.sample2?.jsonValue} />
             </li>
             <li>field type: {graphQLResult.datasource.sample2?.definition?.type}</li>
@@ -113,6 +117,8 @@ const GraphQLConnectedDemo = (props: GraphQLConnectedDemoProps) => {
               return (
                 <li key={routeItem.id}>
                   <NextLink href={routeItem.url.path}>{routeItem.pageTitle?.value}</NextLink>
+                  {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+                  {/*@ts-ignore*/}
                   (editable title too! <Text field={routeItem.pageTitle?.jsonValue} />)
                 </li>
               );

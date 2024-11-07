@@ -21,21 +21,31 @@ type StyleguideFieldUsageLinkProps = ComponentProps &
 const StyleguideFieldUsageLink = (props: StyleguideFieldUsageLinkProps): JSX.Element => (
   <StyleguideSpecimen {...props} e2eId="styleguide-fieldusage-link">
     External link:&nbsp;
+    {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+    {/*@ts-ignore*/}
     <Link field={props.fields.externalLink} />
     <br />
     Internal link:&nbsp;
+    {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+    {/*@ts-ignore*/}
     <Link field={props.fields.internalLink}>
       <em>HTML</em> or other components can be used within link renderers, for example links to
       images.
     </Link>
     <br />
     Email link:&nbsp;
+    {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+    {/*@ts-ignore*/}
     <Link field={props.fields.emailLink} />
     <br />
     All possible content params link:&nbsp;
+    {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+    {/*@ts-ignore*/}
     <Link field={props.fields.paramsLink} />
     <br />
     The link component accepts params of its own:&nbsp;
+    {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+    {/*@ts-ignore*/}
     <Link
       field={props.fields.externalLink}
       showLinkTextWithChildrenPresent={true}

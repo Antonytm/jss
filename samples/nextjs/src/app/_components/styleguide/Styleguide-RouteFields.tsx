@@ -25,6 +25,8 @@ const StyleguideRouteFields = (props: StyleguideRouteFieldsProps): JSX.Element =
     <StyleguideSpecimen {...props} e2eId="styleguide-route-fields">
       <p>
         Route level <code>pageTitle</code> field:{' '}
+        {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+        {/*@ts-ignore*/}
         {value.sitecoreContext.route && <Text field={fields.pageTitle} />}
       </p>
       <p>

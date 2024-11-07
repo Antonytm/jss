@@ -17,6 +17,8 @@ type ContentBlockProps = ComponentProps & {
  */
 const ContentBlock = ({ fields }: ContentBlockProps): JSX.Element => (
   <div className="contentBlock">
+    {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+    {/* @ts-ignore */}
     <Text tag="h2" className="contentTitle" field={fields.heading} />
 
     <RichText className="contentDescription" field={fields.content} />

@@ -28,15 +28,25 @@ const StyleguideLayoutReuse = (props: StyleguideLayoutReuseProps): JSX.Element =
 
         Generally speaking stick to renderEach and renderEmpty unless doing something really custom.
        */}
+      {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+      {/*@ts-ignore*/}
       <Placeholder
         rendering={props.rendering}
         name="NextjsApp-jss-reuse-example"
         renderEach={(component, index) => (
           <div className="col-sm" key={index}>
+            {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+            {/*@ts-ignore*/}
             {component}
           </div>
         )}
-        renderEmpty={(components) => <div className="col-sm">{components}</div>}
+        renderEmpty={(components) => (
+          <div className="col-sm">
+            {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+            {/*@ts-ignore*/}
+            {components}
+          </div>
+        )}
       />
     </div>
   </StyleguideSpecimen>

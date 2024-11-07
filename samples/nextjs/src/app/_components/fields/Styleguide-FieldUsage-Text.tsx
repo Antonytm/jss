@@ -20,9 +20,13 @@ type StyleguideFieldUsageTextProps = ComponentProps &
 const StyleguideFieldUsageText = (props: StyleguideFieldUsageTextProps): JSX.Element => (
   <StyleguideSpecimen {...props} e2eId="styleguide-fieldusage-text">
     {/* Basic use of a text field. No wrapper. */}
+    {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+    {/*@ts-ignore*/}
     <Text field={props.fields.sample} />
 
     {/* Advanced usage of text field. Specifies a wrapper tag, turns off Sitecore editing, supports raw HTML, and has a CSS class on the wrapper */}
+    {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+    {/*@ts-ignore*/}
     <Text
       field={props.fields.sample2}
       tag="section"

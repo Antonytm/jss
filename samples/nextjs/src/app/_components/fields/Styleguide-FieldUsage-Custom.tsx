@@ -20,6 +20,8 @@ type StyleguideFieldUsageCustomProps = ComponentProps &
 const StyleguideFieldUsageCustom = (props: StyleguideFieldUsageCustomProps): JSX.Element => (
   <StyleguideSpecimen {...props} e2eId="styleguide-fieldusage-custom">
     {/* Because the integer field is essentially text, we can render it with the Text helper */}
+    {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+    {/*@ts-ignore*/}
     <Text field={props.fields.customIntField} />
   </StyleguideSpecimen>
 );

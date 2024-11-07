@@ -19,10 +19,14 @@ type StyleguideFieldUsageFileProps = ComponentProps &
 const StyleguideFieldUsageFile = (props: StyleguideFieldUsageFileProps): JSX.Element => (
   <StyleguideSpecimen {...props} e2eId="styleguide-fieldusage-file">
     {/* Renders a file link */}
+    {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+    {/*@ts-ignore*/}
     <File field={props.fields.file} />
     <br />
 
     {/* Renders a file link with a custom body and opening in a new tab */}
+    {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+    {/*@ts-ignore*/}
     <File field={props.fields.file} target="_blank">
       Custom link body
     </File>
