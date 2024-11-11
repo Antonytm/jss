@@ -1,8 +1,6 @@
-'use client';
-
 import React from 'react';
 import { ComponentRendering } from '@sitecore-jss/sitecore-jss/layout';
-import { useSitecoreContext } from './withSitecoreContext';
+// import { useSitecoreContext } from './withSitecoreContext';
 
 export const DefaultEditingError = (): JSX.Element => (
   <div className="sc-jss-editing-error" role="alert">
@@ -29,19 +27,18 @@ export interface WithDatasourceCheckOptions {
  *  The wrapped component, if a datasource is present.
  *  A null component (in normal mode) or an error component (in editing mode), if a datasource is not present.
  */
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 export function withDatasourceCheck(options?: WithDatasourceCheckOptions) {
   return function withDatasourceCheckHoc<ComponentProps extends WithDatasourceCheckProps>(
     Component: React.ComponentType<ComponentProps>
   ) {
     return function WithDatasourceCheck(props: ComponentProps) {
-      const { sitecoreContext } = useSitecoreContext();
-      const EditingError = options?.editingErrorComponent ?? DefaultEditingError;
+      // const { sitecoreContext } = useSitecoreContext();
+      // const EditingError = options?.editingErrorComponent ?? DefaultEditingError;
 
-      return props.rendering?.dataSource ? (
-        <Component {...props} />
-      ) : sitecoreContext.pageEditing ? (
-        <EditingError />
-      ) : null;
+      // Fix later: need to figure out mode: edit or normal to return error or ignore
+      return props.rendering?.dataSource ? <Component {...props} /> : null;
     };
   };
 }

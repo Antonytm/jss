@@ -1,5 +1,5 @@
 {
-  "name": "nextjs",
+  "name": "nextjs-app",
   "description": "Application utilizing Sitecore JavaScript Services and Next.js",
   "version": "22.0.0-canary",
   "private": true,

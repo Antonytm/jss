@@ -1,5 +1,3 @@
-'use client';
-
 import { Field, Placeholder, Text, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 
@@ -19,7 +17,7 @@ const StyleguideSection = (props: StyleguideSectionProps): JSX.Element => (
     {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
     {/*@ts-ignore*/}
     <Text className="border-bottom" field={props.fields.heading} tag="h3" />
-    <Placeholder name="NextjsApp-jss-styleguide-section" rendering={props.rendering} />
+    <Placeholder name="jss-styleguide-section" rendering={props.rendering} />
   </div>
 );
 

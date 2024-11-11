@@ -1,5 +1,3 @@
-'use client';
-
-import { Placeholder } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Placeholder } from './ServerPlaceholder';
 
 export default Placeholder;

@@ -119,6 +119,7 @@ export class GraphQLDictionaryService extends DictionaryServiceBase {
     // If the caller does not specify a root item ID, then we try to figure it out
     const rootItemId =
       this.options.rootItemId ||
+      '{DDB2AB53-CC1E-4D78-BD3F-33F9B4A0CD93}' ||
       (await getAppRootId(
         this.graphQLClient,
         this.options.siteName,
