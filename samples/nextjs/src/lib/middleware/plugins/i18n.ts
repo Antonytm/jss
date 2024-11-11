@@ -1,6 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-import { createIntlMiddleware } from 'next-intl/server';
+import createMiddleware from 'next-intl/middleware';
 import { NextRequest, NextResponse } from 'next/server';
 import { MiddlewarePlugin } from '..';
 import { i18n } from '../../../../i18n-config';
@@ -12,7 +12,7 @@ class I18nPlugin implements MiddlewarePlugin {
   order = 0;
 
   constructor() {
-    this.i18nMiddleware = createIntlMiddleware(i18n);
+    this.i18nMiddleware = createMiddleware(i18n);
   }
 
   async exec(req: NextRequest): Promise<NextResponse> {
