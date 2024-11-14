@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Text, Field, useSitecoreContext, getServerContext } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Text, Field, getServerContext } from '@sitecore-jss/sitecore-jss-nextjs';
 import StyleguideSpecimen from './Styleguide-Specimen';
 import { ComponentProps } from 'lib/component-props';
 import { StyleguideSpecimenFields } from 'lib/component-props/styleguide';
@@ -17,6 +17,8 @@ type StyleguideRouteFields = {
  */
 const StyleguideRouteFields = (props: StyleguideRouteFieldsProps): JSX.Element => {
   const value = getServerContext();
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
   const fields = value.route?.fields as StyleguideRouteFields;
 
   return (

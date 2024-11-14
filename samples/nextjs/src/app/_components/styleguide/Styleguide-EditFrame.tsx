@@ -1,6 +1,6 @@
 import { Field, Item, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
-import { EditFrame } from '@sitecore-jss/sitecore-jss-nextjs';
+//import { EditFrame } from '@sitecore-jss/sitecore-jss-nextjs';
 import StyleguideSpecimen from './Styleguide-Specimen';
 import { StyleguideSpecimenFields } from 'lib/component-props/styleguide';
 
@@ -20,7 +20,7 @@ type StyleguideEditFrameProps = ComponentProps &
  * Edit buttons, custom CSS and datasource can be applied.
  */
 const StyleguideEditFrame = (props: StyleguideEditFrameProps): JSX.Element => {
-  const applyRed = props.fields.applyRedToText.value;
+  //const applyRed = props.fields.applyRedToText.value;
   return (
     <StyleguideSpecimen {...props} e2eId="styleguide-edit-frame">
       {props.children}
@@ -46,7 +46,6 @@ const StyleguideEditFrame = (props: StyleguideEditFrameProps): JSX.Element => {
           ))}
         </ul>
         {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
-      {/*@ts-ignore*/}
       {/*
         {props.children}
       </EditFrame>
@@ -55,6 +54,7 @@ const StyleguideEditFrame = (props: StyleguideEditFrameProps): JSX.Element => {
   );
 };
 
+/*
 const getEditFrameProps = (dataSource?: string) => {
   return {
     dataSource: dataSource
@@ -72,6 +72,7 @@ const getEditFrameProps = (dataSource?: string) => {
   };
 };
 
+
 const editFrameButtons = [
   {
     header: 'WebEditButton',
@@ -86,5 +87,6 @@ const editFrameButtons = [
     tooltip: 'Allows you to open field editor for specified fields',
   },
 ];
+*/
 
 export default withDatasourceCheck()<StyleguideEditFrameProps>(StyleguideEditFrame);
