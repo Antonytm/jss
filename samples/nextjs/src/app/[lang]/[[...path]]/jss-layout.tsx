@@ -13,6 +13,7 @@ interface LayoutProps {
 }
 
 const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
+  console.log(layoutData);
   const { route } = layoutData?.sitecore;
 
   return (

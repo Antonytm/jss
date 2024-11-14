@@ -161,3 +161,5 @@ export {
   WithSitecoreContextOptions,
   WithSitecoreContextProps,
 } from '@sitecore-jss/sitecore-jss-react';
+
+export { setServerContext, getServerContext } from './server-sitecore-context';

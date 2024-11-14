@@ -3,13 +3,17 @@ const { getPublicUrl } = require('@sitecore-jss/sitecore-jss-nextjs');
 const plugins = require('./src/temp/next-config-plugins') || {};
 
 const publicUrl = getPublicUrl();
+const createNextIntlPlugin = require('next-intl/plugin');
+console.log(createNextIntlPlugin);
+const withNextIntl = createNextIntlPlugin();
 
 /**
  * @type {import('next').NextConfig}
  */
-const nextConfig = {
+const nextConfig = withNextIntl({
   experimental: {
     appDir: true,
+    //dynamicIO: true,
   },
   // Set assetPrefix to our public URL
   assetPrefix: publicUrl,
@@ -55,7 +59,7 @@ const nextConfig = {
       }, 
     ];
   },
-};
+});
 
 module.exports = () => {
   // Run the base config through any configured plugins

@@ -1,5 +1,6 @@
-import { Field, Placeholder, Text, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Field, Text, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
+import Placeholder from 'components/Placeholder';
 
 type StyleguideSectionProps = ComponentProps & {
   fields: {

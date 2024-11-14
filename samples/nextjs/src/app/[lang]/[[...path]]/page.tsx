@@ -6,6 +6,7 @@ import { sitecorePagePropsFactory } from 'lib/page-props-factory';
 // import { sitemapFetcher } from 'lib/sitemap-fetcher';
 import { Providers } from './Providers';
 import Layout from './jss-layout';
+import { setServerContext } from '@sitecore-jss/sitecore-jss-nextjs';
 // import { i18n } from '../../../../i18n-config';
 // import { StaticPath } from '@sitecore-jss/sitecore-jss-nextjs';
 
@@ -21,6 +22,12 @@ export default async function Page({ params }: any) {
   };
 
   const pageProps = await sitecorePagePropsFactory.create(context);
+  setServerContext(pageProps);
+  //const pageProps1 = unstable_cache(await sitecorePagePropsFactory.create);
+  //console.log(params);
+
+  //console.log(pageProps);
+  //console.log(context.params);
 
   if (pageProps.notFound) {
     notFound();
@@ -31,6 +38,8 @@ export default async function Page({ params }: any) {
   }
 
   return (
+    /* eslint-disable-next-line @typescript-eslint/ban-ts-comment */
+    /* @ts-ignore */
     <Providers {...pageProps}>
       <Layout layoutData={pageProps.layoutData} headLinks={pageProps.headLinks} />
     </Providers>
@@ -41,7 +50,7 @@ export default async function Page({ params }: any) {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export async function generateMetadata({ params }: any) {
   return {
-    title: params.path ? params.path[0] : 'Home',
+    title: 'test',
   };
 }
 

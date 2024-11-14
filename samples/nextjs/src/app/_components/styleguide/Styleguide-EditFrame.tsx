@@ -1,5 +1,3 @@
-'use client';
-
 import { Field, Item, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 import { EditFrame } from '@sitecore-jss/sitecore-jss-nextjs';
@@ -25,8 +23,10 @@ const StyleguideEditFrame = (props: StyleguideEditFrameProps): JSX.Element => {
   const applyRed = props.fields.applyRedToText.value;
   return (
     <StyleguideSpecimen {...props} e2eId="styleguide-edit-frame">
+      {props.children}
       {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
       {/*@ts-ignore*/}
+      {/*
       <EditFrame {...getEditFrameProps(props.rendering.dataSource)}>
         This is the content that will be wrapped by edit frame in Experience Editor.
         <br />
@@ -46,9 +46,11 @@ const StyleguideEditFrame = (props: StyleguideEditFrameProps): JSX.Element => {
           ))}
         </ul>
         {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
-        {/*@ts-ignore*/}
+      {/*@ts-ignore*/}
+      {/*
         {props.children}
       </EditFrame>
+      */}
     </StyleguideSpecimen>
   );
 };
@@ -57,10 +59,10 @@ const getEditFrameProps = (dataSource?: string) => {
   return {
     dataSource: dataSource
       ? {
-          itemId: dataSource,
-          // databaseName: 'web',
-          // language: 'en', // optional params you can also set for datasource
-        }
+        itemId: dataSource,
+        // databaseName: 'web',
+        // language: 'en', // optional params you can also set for datasource
+      }
       : undefined, // datasource will set the item to be edited by edit frame
     buttons: editFrameButtons, // add custom editing functionality or edit field sets with buttons
     title: 'jssEditFrame',

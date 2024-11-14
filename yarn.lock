@@ -7619,6 +7619,7 @@ __metadata:
     eslint-plugin-react: ^7.32.1
     jsdom: ^21.1.0
     mocha: ^10.2.0
+    nanostores: ^0.11.3
     next: latest
     nock: ^13.3.0
     node-html-parser: ^6.1.4
@@ -25037,6 +25038,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nanostores@npm:^0.11.3":
+  version: 0.11.3
+  resolution: "nanostores@npm:0.11.3"
+  checksum: 1db758d3910cf74191327fba0556d5666ef53085bb4822c6bb0f1d7200a457e229530de63f9b11c251c427c88e5efc028f4fc0f37203f49adf95fcb5125e0637
+  languageName: node
+  linkType: hard
+
 "natural-compare-lite@npm:^1.4.0":
   version: 1.4.0
   resolution: "natural-compare-lite@npm:1.4.0"
@@ -29533,6 +29541,7 @@ __metadata:
     eslint-plugin-jsdoc: ^30.7.9
     eslint-plugin-prettier: ^3.3.0
     lerna: ^5.6.2
+    nanostores: ^0.11.3
     prettier: ^1.14.3
     typedoc: ^0.22.5
     typedoc-plugin-markdown: ^3.11.3

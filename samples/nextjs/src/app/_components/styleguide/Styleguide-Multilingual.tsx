@@ -1,5 +1,3 @@
-'use client';
-
 import { Text, Field, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import Link from 'next/link';
 import { useTranslations, useLocale } from 'next-intl';
