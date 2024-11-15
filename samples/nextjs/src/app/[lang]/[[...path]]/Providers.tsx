@@ -22,15 +22,6 @@ export const Providers = (props: SitecorePageProps) => {
 
   return (
     <div>
-      <>
-        <button
-          onClick={() => {
-            setClicked(true);
-          }}
-        >
-          Throw error
-        </button>
-      </>
       <IntlProvider locale={props.locale} messages={props.dictionary}>
         {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
         {/* @ts-ignore */}
