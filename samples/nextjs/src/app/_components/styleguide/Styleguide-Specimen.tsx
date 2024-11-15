@@ -1,5 +1,3 @@
-'use client';
-
 import { Text, RichText, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 import { StyleguideSpecimenFields } from 'lib/component-props/styleguide';

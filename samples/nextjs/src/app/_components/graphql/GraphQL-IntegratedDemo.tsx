@@ -1,5 +1,3 @@
-'use client';
-
 import { Text, Link, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 import NextLink from 'next/link';

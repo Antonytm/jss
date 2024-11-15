@@ -25,3 +25,4 @@ packages/*/*.tgz
 
 .idea
 .next
+.vercel

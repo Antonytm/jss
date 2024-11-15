@@ -1,5 +1,3 @@
-'use client';
-
 import React, { ReactElement } from 'react';
 import { withPlaceholder, withSitecoreContext, Text } from '@sitecore-jss/sitecore-jss-nextjs';
 import StyleguideSpecimen from './Styleguide-Specimen';
@@ -45,7 +43,7 @@ class StyleguideLayoutTabs extends React.Component<
   render() {
     const { tabsPlaceholder, sitecoreContext } = this.props;
 
-    let validTabIndex = 0;
+    //let validTabIndex = 0;
     const isEditing = sitecoreContext && sitecoreContext.pageEditing;
 
     return (
@@ -72,24 +70,6 @@ class StyleguideLayoutTabs extends React.Component<
                 </li>
               ))}
         </ul>
-        <div className="p-3 border-left border-right border-bottom">
-          {(tabsPlaceholder || []).map((tab: ReactElement) => {
-            const isValid = tab.props && tab.props.fields;
-
-            // allow experience editor markup components to render
-            if (!isValid && isEditing) return tab;
-
-            validTabIndex += 1;
-
-            // we render the tab either if it's active - or we're editing,
-            // in which case we stack all tabs for visual editing
-            if (this.state.activeTabIndex === validTabIndex - 1 || isEditing) {
-              return tab;
-            }
-
-            return null;
-          })}
-        </div>
       </StyleguideSpecimen>
     );
   }
