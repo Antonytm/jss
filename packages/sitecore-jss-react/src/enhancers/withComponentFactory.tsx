@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import { ComponentFactoryReactContext } from '../components/SitecoreContext';
 import { ComponentFactory } from '../components/sharedTypes';
