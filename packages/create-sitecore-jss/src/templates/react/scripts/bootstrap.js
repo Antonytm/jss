@@ -21,7 +21,7 @@ if (disconnected && process.env.REACT_APP_FETCH_WITH === constants.FETCH_WITH.GR
   Generates the /src/temp/config.js file which contains runtime configuration
   that the app can import and use.
 */
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 const configOverride = disconnected ? { sitecoreApiHost: `http://localhost:${port}` } : null;
 
 configGenerator(configOverride);

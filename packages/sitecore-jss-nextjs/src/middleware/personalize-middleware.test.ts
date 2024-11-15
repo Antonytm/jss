@@ -31,7 +31,7 @@ describe('PersonalizeMiddleware', () => {
   const defaultLang = 'en';
   const pointOfSale = 'cdp-pos';
 
-  const referrer = 'http://localhost:3000';
+  const referrer = 'http://localhost:3001';
   const experienceParams: ExperienceParams = {
     referrer,
     utm: {

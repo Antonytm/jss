@@ -103,7 +103,7 @@ class StyleguideLayoutTabs extends React.Component<
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 // eslint-disable-next-line prettier/prettier
-const tabsComponentWithPlaceholderInjected = withPlaceholder({ placeholder: 'NextjsApp-jss-tabs', prop: 'tabsPlaceholder' })(StyleguideLayoutTabs);
+const tabsComponentWithPlaceholderInjected = withPlaceholder({ placeholder: 'jss-tabs', prop: 'tabsPlaceholder' })(StyleguideLayoutTabs);
 
 // We need to know if experience editor is active, to disable the dynamic tab behavior for editing.
 // Using the same technique as injecting the placeholder, we wrap the component again to inject the

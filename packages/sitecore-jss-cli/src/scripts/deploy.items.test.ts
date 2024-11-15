@@ -48,7 +48,7 @@ describe('deploy.items script', () => {
       deployUrl: 'customs.jss.com',
       deploySecret: 'snape-kills-dumbledore',
       debugSecurity: true,
-      proxy: 'localhost:3000',
+      proxy: 'localhost:3001',
       acceptCertificate: 'yes',
       destination: 'S:/Santiago',
       source: 'F:/Biarritz',
@@ -71,7 +71,7 @@ describe('deploy.items script', () => {
     const argv = {
       packageOutputPath: 'mock',
       debugSecurity: true,
-      proxy: 'localhost:3000',
+      proxy: 'localhost:3001',
       acceptCertificate: 'yes',
       destination: 'S:/Santiago',
       source: 'F:/Biarritz',

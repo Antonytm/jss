@@ -32,7 +32,7 @@ const StyleguideLayoutReuse = (props: StyleguideLayoutReuseProps): JSX.Element =
       {/*@ts-ignore*/}
       <Placeholder
         rendering={props.rendering}
-        name="NextjsApp-jss-reuse-example"
+        name="jss-reuse-example"
         renderEach={(component, index) => (
           <div className="col-sm" key={index}>
             {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}

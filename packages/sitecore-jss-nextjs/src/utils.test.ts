@@ -11,7 +11,7 @@ describe('utils', () => {
 
     it('should fallback to localhost:3000 if not defined', () => {
       const result = getPublicUrl();
-      expect(result).to.equal('http://localhost:3000');
+      expect(result).to.equal('http://localhost:3001');
     });
 
     it('should return env variable', () => {

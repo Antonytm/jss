@@ -16,9 +16,9 @@ export const getPublicUrl = (): string => {
     console.warn(
       `${chalk.yellow.bold(
         'Warning:'
-      )} An PUBLIC_URL environment variable is not defined. Falling back to http://localhost:3000.`
+      )} An PUBLIC_URL environment variable is not defined. Falling back to http://localhost:3001.`
     );
-    url = 'http://localhost:3000';
+    url = 'http://localhost:3001';
   } else {
     try {
       new URL(url);

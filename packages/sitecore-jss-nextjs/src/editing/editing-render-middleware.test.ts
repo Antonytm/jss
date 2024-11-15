@@ -36,7 +36,7 @@ const mockRequest = (body?: any, query?: Query, method?: string, host?: string) 
     body: body ?? {},
     method: method ?? 'POST',
     query: query ?? {},
-    headers: { host: host ?? 'localhost:3000' },
+    headers: { host: host ?? 'localhost:3001' },
   } as NextApiRequest;
 };
 
@@ -115,7 +115,7 @@ describe('EditingRenderMiddleware', () => {
     expect(res.getHeader, 'get preview cookies').to.have.been.calledWith('Set-Cookie');
     expect(fetcher.get).to.have.been.calledOnce;
     expect(fetcher.get, 'pass along preview cookies').to.have.been.calledWith(
-      match('http://localhost:3000/test/path?timestamp'),
+      match('http://localhost:3001/test/path?timestamp'),
       {
         headers: {
           Cookie: mockNextJsPreviewCookies.join(';'),

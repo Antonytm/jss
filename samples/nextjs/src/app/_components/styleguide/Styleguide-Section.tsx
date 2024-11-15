@@ -19,7 +19,7 @@ const StyleguideSection = (props: StyleguideSectionProps): JSX.Element => (
     {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
     {/*@ts-ignore*/}
     <Text className="border-bottom" field={props.fields.heading} tag="h3" />
-    <Placeholder name="NextjsApp-jss-styleguide-section" rendering={props.rendering} />
+    <Placeholder name="jss-styleguide-section" rendering={props.rendering} />
   </div>
 );
 

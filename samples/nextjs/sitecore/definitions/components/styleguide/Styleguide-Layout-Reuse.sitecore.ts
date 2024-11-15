@@ -10,7 +10,7 @@ export default function StyleguideLayoutReuse(manifest: Manifest): void {
     name: 'Styleguide-Layout-Reuse',
     templateName: 'NextjsApp-Styleguide-Layout-Reuse',
     icon: SitecoreIcon.DocumentsExchange,
-    placeholders: ['NextjsApp-jss-reuse-example'],
+    placeholders: ['jss-reuse-example'],
     // inherit fields from another template (../templates/Styleguide-Explanatory-Component)
     // inheritance adds fields defined on the base template(s) implicitly to this component
     inherits: [

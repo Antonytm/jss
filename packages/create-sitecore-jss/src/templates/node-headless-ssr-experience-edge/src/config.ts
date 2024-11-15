@@ -33,7 +33,7 @@ export const config: Config = {
   /**
    * Port which will be used when start sample
    */
-  port: process.env.PORT || 3000,
+  port: process.env.PORT || 3001,
   /*
    * The default language to use in case the context language cannot be determined (this happens
    * on initial page load, if the language is not specified in the URL)

@@ -1,7 +1,7 @@
 fields:
   pageTitle: Styleguide | Sitecore JSS
 placeholders:
-  NextjsApp-jss-main:
+  jss-main:
     - componentName: ContentBlock
       fields:
         heading: JSS Styleguide
@@ -13,12 +13,12 @@ placeholders:
           <p>The content and layout of this page is defined in <code>/data/routes/styleguide/da-DK.yml</code></p>
     - componentName: Styleguide-Layout
       placeholders:
-        NextjsApp-jss-styleguide-layout:
+        jss-styleguide-layout:
           - componentName: Styleguide-Section
             fields:
               heading: Multilingual Patterns
             placeholders:
-              NextjsApp-jss-styleguide-section:
+              jss-styleguide-section:
                 - componentName: Styleguide-Multilingual
                   fields:
                     heading: Translation Patterns
